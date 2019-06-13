@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>a.3d练习1-魔方</title>
+		<style>
+			.demo1{
+				width: 200px;
+				height: 200px;
+				
+				
+				/* 3D变形 */
+				transform-style:preserve-3d;
+				/* perspectice-origin: 100% 50%; */
+				/* perspective: 2000; */
+				transform:perspectice(2000px);
+				-webkit-perspective: 2000;
+				
+			}
+			.demo1-in{
+				height: 100%;
+				background: darkred;
+				transition: 2s;
+			}
+			.demo1:hover .demo1-in{
+				transform: rotateY(180deg);
+			}
+			
+			.demo2{
+				width: 200px;
+				height: 200px;
+				position: relative;
+				
+				perspective: 500;
+				transform-style: preserve-3d;
+				
+				border: 1px solid #000;
+				background: #0F00F0;
+				
+				
+			}
+			.demo2-in{
+				width: 200px;
+				height: 200px;
+				
+				transform: rotateY(50deg);
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			
+			
+		</style>
+	</head>
+	<body>
+		<div class="demo1">
+			<div class="demo1-in"></div>
+		</div>
+		
+		<div class="demo2">
+			<div class="demo2-in"></div>
+		</div>
+		
+		
+	</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>正方体</title>
+		<style>
+			*{
+				margin: 0;
+			}
+			div,
+			img {
+				width: 200px;
+				height: 200px;
+			}
+
+			.box {
+				
+				margin: 100px auto;
+				perspective: 400;
+				transform-style: preserve-3d;
+
+				position: relative;
+				
+				animation: xuanzhuan 5s cubic-bezier(0.0,0.0,0.0,0.0) infinite forwards;
+			}
+
+			.bian {
+				position: absolute;
+
+			}
+
+			.box1 {
+				transform: translateZ(100px);
+				/* 前面 */
+			}
+
+			.box2 {
+				transform: rotateX(90deg) translateZ(100px);
+				/* 前面 */
+			}
+
+			.box3 {
+				transform: rotateX(180deg) translateZ(100px);
+				/* 前面 */
+			}
+
+			.box4 {
+				transform: rotateX(270deg) translateZ(100px);
+				/* 前面 */
+			}
+
+			.box5 {
+				transform: rotateY(90deg) translateZ(100px);
+				/* 前面 */
+			}
+
+			.box6 {
+				transform: rotateY(270deg) translateZ(100px);
+				/* 前面 */
+			}
+
+			@-webkit-keyframes xuanzhuan {
+				from {
+					transform: perspective(400px) rotatex(0deg);
+				}
+
+				to {
+					transform: perspective(400px) rotatex(360deg);
+				}
+			}
+
+			.box:hover {
+				transform: perspective(400px) scale(1.5);
+				animation: xuanzhuan 5s cubic-bezier(0.0, 0.0, 0.0, 0.0) infinite paused forwards;
+				/*有hover事件是动画暂停*/
+			}
+		
+		
+		ul {
+					list-style-type: none;
+					margin: 0;
+					padding: 0;
+					overflow: hidden;
+					border: 1px solid #e7e7e7;
+					background-color: #f3f3f3;
+				}
+		
+				li {
+					float: left;
+				}
+		
+				li a {
+					display: block;
+					color: #666;
+					text-align: center;
+					padding: 14px 16px;
+					text-decoration: none;
+				}
+		
+				li a:hover:not(.active) {
+					background-color: #ddd;
+				}
+		
+				li a.active {
+					color: white;
+					background-color: cadetblue
+				}
+			</style>
+		</head>
+		<body>
+			<ul>
+				<li><a href="f.3d练习5.html">练习5</a></li>
+				<li><a href="a.3d练习4.html">练习4</a></li>
+				<li><a href="b.3d练习2.html">练习3</a></li>
+				<li><a href="c.3d练习3.html">练习2</a></li>
+				<li><a  class="active" href="e.3d练习4.html">练习1</a></li>
+			</ul>
+		
+		
+		
+		
+		<div class="box">
+			<div class="bian box1"><img src="images/chehubang.png" alt=""></div>
+			<div class="bian box2"><img src="images/man_technologist_291px_1214379_easyicon.net.png" alt=""></div>
+			<div class="bian box3"><img src="images/chehubang.png" alt=""></div>
+			<div class="bian box4"><img src="images/man_technologist_291px_1214379_easyicon.net.png" alt=""></div>
+			<div class="bian box5"><img src="images/chehubang.png" alt=""></div>
+			<div class="bian box6"><img src="images/man_technologist_291px_1214379_easyicon.net.png" alt=""></div>
+		</div>
+	</body>
+</html>

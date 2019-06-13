@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>卡片反转</title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				width: 200px;
+				height: 200px;
+				margin: 100px auto;
+				perspective:400;
+				transform-style: preserve-3d;
+				
+				position: relative;
+				
+				animation: go 2s;
+				/* transition: 2s;   可鼠标悬浮旋转*/
+			}
+			/* .box:hover{
+				transform: rotateY(180deg);
+			} */
+			.box div img{
+				width: 200px;
+				height: 200px;
+			}
+			.bian{
+				width: 200px;
+				height: 200px;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			.box1{
+				transform: rotateY(0deg);
+			}
+			.box2{
+				transform: rotateY(180deg);
+			}
+			
+			@keyframes go{
+				from{
+					transform: rotateY(0deg);
+				}
+				to{
+					transform: rotateY(360deg);
+					  backface-visibility: hidden; /* 设置后面的可适度为看不见 */
+				}
+			}
+			
+					ul {
+					list-style-type: none;
+					margin: 0;
+					padding: 0;
+					overflow: hidden;
+					border: 1px solid #e7e7e7;
+					background-color: #f3f3f3;
+				}
+		
+				li {
+					float: left;
+				}
+		
+				li a {
+					display: block;
+					color: #666;
+					text-align: center;
+					padding: 14px 16px;
+					text-decoration: none;
+				}
+		
+				li a:hover:not(.active) {
+					background-color: #ddd;
+				}
+		
+				li a.active {
+					color: white;
+					background-color: cadetblue
+				}
+			</style>
+		</head>
+		<body>
+			<ul>
+				<li><a href="f.3d练习5.html">练习5</a></li>
+				<li><a href="a.3d练习4.html">练习4</a></li>
+				<li><a href="b.3d练习2.html">练习3</a></li>
+				<li><a class="active" href="c.3d练习3.html">练习2</a></li>
+				<li><a href="e.3d练习4.html">练习1</a></li>
+			</ul>
+		<div class="box">
+			<div class="bian box1"><img src="images/chehubang.png" alt=""></div>
+			<div class="bian box2"><img src="images/man_technologist_291px_1214379_easyicon.net.png" alt=""></div>
+		</div>
+	</body>
+</html>

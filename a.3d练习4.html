@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>转换模块 - 正方体 -升级</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			div {
+				width: 200px;
+				height: 200px;
+				margin: 40px auto;
+			}
+
+			.div1 {
+				margin: 100px auto;
+				perspective: 400;
+				/* transform: rotateX(20deg) rotateY(90deg); */
+
+				transform-style: preserve-3d;
+
+				position: relative;
+				/* border: 1px solid #000; */
+				/* animation: xuanzhuan 5s cubic-bezier(0.0,0.0,0.0,0.0) infinite forwards; */
+				-webkit-animation: xuanzhuan 4s infinite linear;
+				/*谁让box做无限循环的动画*/
+				/*旋转动画*/
+			}
+
+			.div1>div {
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+
+			.div1-1 {
+				background: red;
+				transform: translateZ(100px);
+			}
+
+			.div1-2 {
+				background: green;
+				transform: rotateX(90deg) translateZ(100px)
+			}
+
+			.div1-3 {
+				background: yellow;
+				transform: rotateX(180deg) translateZ(100px)
+			}
+
+			.div1-4 {
+				background: yellowgreen;
+				transform: rotateX(270deg) translateZ(100px)
+			}
+
+			.div1-5 {
+				background: #009999;
+				transform: rotateY(90deg) translateZ(100px)
+			}
+
+			.div1-6 {
+				background: #000;
+				transform: rotateY(270deg) translateZ(100px)
+			}
+
+			/* ?? */
+			@-webkit-keyframes xuanzhuan {
+				0% {
+					-webkit-transform: rotateY(0deg);
+				}
+
+				50% {
+					-webkit-transform: rotateY(360deg);
+				}
+
+				51% {
+					-webkit-transform: rotateX(0deg);
+				}
+
+				100% {
+					-webkit-transform: rotateX(360deg);
+				}
+			}
+		
+		
+		ul {
+					list-style-type: none;
+					margin: 0;
+					padding: 0;
+					overflow: hidden;
+					border: 1px solid #e7e7e7;
+					background-color: #f3f3f3;
+				}
+		
+				li {
+					float: left;
+				}
+		
+				li a {
+					display: block;
+					color: #666;
+					text-align: center;
+					padding: 14px 16px;
+					text-decoration: none;
+				}
+		
+				li a:hover:not(.active) {
+					background-color: #ddd;
+				}
+		
+				li a.active {
+					color: white;
+					background-color: cadetblue
+				}
+			</style>
+		</head>
+		<body>
+			<ul>
+				<li><a href="f.3d练习5.html">练习5</a></li>
+				<li><a class="active"   href="a.3d练习4.html">练习4</a></li>
+				<li><a href="b.3d练习2.html">练习3</a></li>
+				<li><a href="c.3d练习3.html">练习2</a></li>
+				<li><a href="e.3d练习4.html">练习1</a></li>
+			</ul>
+		<div class="div1">
+			<div class="div1-1">1</div>
+			<div class="div1-2">2</div>
+			<div class="div1-3">3</div>
+			<div class="div1-4">4</div>
+			<div class="div1-5">5</div>
+			<div class="div1-6">6</div>
+		</div>
+
+
+
+	</body>
+</html>
